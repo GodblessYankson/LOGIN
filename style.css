@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FsY3VsYXRvcnxlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: filter 0.7s;
+
+}
+h1{
+    font-size: 60px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+.btn{
+    padding: 10px 20px;
+    width: 200px;
+    cursor: pointer;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    filter: brightness(0.8);
+}
+.active.container{
+    filter: blur(5px) brightness(0.7);
+    
+}
+.popup-container{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.9s;
+}
+h4{
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: sans-serif;
+}
+label{
+    color: #1a1a1a;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.popup-btn{
+    background-color: orangered;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+input{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+input::placeholder{
+    color: gray;
+}
+.close-icon{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.close-icon:hover{
+    color: orangered;
+}
+.active.popup-container{
+    visibility: hidden;
+    top: 10%;
+    opacity: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+ @media (max-width:450px) {
+    .popup-container{
+        width: 300px;
+        padding: 10px;
+    }
+    h4{
+        font-size: 20px;
+        margin: 5px 0; 
+
+    }
+    .btn{
+        margin-bottom: 5px;
+    }
+    .popup-btn{
+        width: 100%;
+        margin: auto;
+        font-weight: bold;
+    }
+    input{
+        margin: px 0;
+    }
+ }
